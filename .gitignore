@@ -1,0 +1,72 @@
+# =============================
+# Python
+# =============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environment
+venv/
+.env/
+.env.bak/
+.venv/
+
+# Byte-compiled / optimized
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Cache
+*.cache
+.cache/
+
+# Data files (OPTIONAL)
+# If you want to ignore large datasets:
+# data/*.csv
+# data/*.xlsx
+
+# SQLite / temp DB
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# PyCharm / JetBrains
+.idea/
+
+# pytest
+.pytest_cache/
+
+# mypy / type checking
+.mypy_cache/
+
+# matplotlib cache
+.matplotlib/
+
+# -----------------------------
+# Custom for this project
+# -----------------------------
+
+# Local analysis outputs
+analysis/__pycache__/
+analysis/*__pycache__*/
+
+# Local notebook outputs
+notebooks/*_checkpoint.ipynb
+
+# Ignore large figures unless you want them
+figures/*.png
+figures/*.jpg
