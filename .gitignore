@@ -70,3 +70,8 @@ notebooks/*_checkpoint.ipynb
 # Ignore large figures unless you want them
 figures/*.png
 figures/*.jpg
+
+datasets/*.csv
+
+.kaggle/
+.cache/
