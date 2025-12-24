@@ -24,13 +24,18 @@ DATASETS = [
         "source_file": "online_retail_II.csv", 
         "target_file": "online_retail.csv",
     },
-        {
+    {
         "name": "Telco Customer Churn",
         "kaggle_id": "blastchar/telco-customer-churn",
         "source_file": "WA_Fn-UseC_-Telco-Customer-Churn.csv", 
         "target_file": "telco_customer_churn.csv",
     },
-
+    {
+        "name": "Ames Housing Dataset",
+        "kaggle_id": "prevek18/ames-housing-dataset",
+        "source_file": "AmesHousing.csv", 
+        "target_file": "ames_housing.csv",
+    }
 ]
 
 for ds in DATASETS:
