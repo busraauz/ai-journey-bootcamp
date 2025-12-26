@@ -35,6 +35,12 @@ DATASETS = [
         "kaggle_id": "prevek18/ames-housing-dataset",
         "source_file": "AmesHousing.csv", 
         "target_file": "ames_housing.csv",
+    },
+    {
+        "name": "Breast Cancer Dataset",
+        "kaggle_id": "yasserh/breast-cancer-dataset",
+        "source_file": "breast-cancer.csv", 
+        "target_file": "breast_cancer.csv",
     }
 ]
 
