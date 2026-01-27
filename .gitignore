@@ -75,3 +75,5 @@ datasets/*.csv
 
 .kaggle/
 .cache/
+
+week2/prep/*
