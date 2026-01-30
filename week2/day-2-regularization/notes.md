@@ -8,6 +8,7 @@
   - **From scratch** (gradient descent + penalty)
   - **Using scikit-learn** (Ridge, Lasso, ElasticNet)
 - Compare model behavior, sparsity, and generalization
+- Use **GridSearchCV** to tune regularization strength (and ElasticNet mix)
 
 ---
 
@@ -101,9 +102,11 @@ $X_{\text{scaled}} = \frac{X - \mu}{\sigma}$
 
 1. Train/test split
 2. Build preprocessing pipeline
-3. Fit Ridge / Lasso / ElasticNet
-4. Evaluate with MSE/RMSE
-5. Compare train vs test performance
+3. Tune hyperparameters with cross-validation
+   - GridSearchCV on `alpha` (and `l1_ratio` for ElasticNet)
+4. Fit best model on training data
+5. Evaluate with MSE/RMSE
+6. Compare train vs test performance
 
 ---
 
@@ -121,7 +124,21 @@ $X_{\text{scaled}} = \frac{X - \mu}{\sigma}$
 
 ---
 
-## 8️⃣ Key Understandings & Limitations
+## 8️⃣ Hyperparameter Tuning (Grid Search)
+
+- **Goal:** find the best regularization strength using cross-validation
+- **Ridge/Lasso:** search over `alpha`
+- **ElasticNet:** search over `alpha` and `l1_ratio`
+- **Metric used:** RMSE (via `neg_root_mean_squared_error` in sklearn)
+
+Example grid:
+
+- `alpha` in $[10^{-4}, 10^1]$ (log-spaced)
+- `l1_ratio` in $\\{0.1, 0.3, 0.5, 0.7, 0.9\\}$
+
+---
+
+## 9️⃣ Key Understandings & Limitations
 
 - Regularization improves **generalization**, not raw training fit
 - Ridge is stable with **multicollinearity**
